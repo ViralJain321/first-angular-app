@@ -1,0 +1,48 @@
+<!-- ngFor -->
+<div class="card">
+  <div class="card-header"></div>
+  <div class="card-body">
+    <ul>
+      <li *ngFor="let c of courses; let i = index">
+        {{ c.name }} - {{ c.id }}
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header"></div>
+  <div class="card-body">
+    <table>
+      <tr *ngFor="let c of courses; let i = index">
+        <td>{{ c.name }}</td>
+        <td>{{ c.id }}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- ngSwitch Example -->
+<div class="row-mt-5">
+  <div class="col-md-5">
+    <h4>Your Choice : {{ myChoice }}</h4>
+    <div [ngSwitch]="myChoice">
+      <p *ngSwitchCase="1">Apple</p>
+      <p *ngSwitchCase="2">Banana</p>
+      <p *ngSwitchCase="3">MAngo</p>
+      <p *ngSwitchCase="4">Apple</p>
+      <p *ngSwitchDefault>No Fruits</p>
+    </div>
+    <button (click)="nextChoice()">next</button>
+  </div>
+</div>
+
+<!-- ngContainer and ngTemplate -->
+<ng-container *ngIf="courses.length > 0; else nocourse">
+  <ng-container class="list-group" *ngFor="let c of courses">
+    <div class="list-group-item">{{ c.name }}</div>
+  </ng-container>
+</ng-container>
+<ng-template #nocourse>
+  <h3>No Course Available</h3>
+</ng-template>

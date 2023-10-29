@@ -1,0 +1,22 @@
+<div [ngStyle]="{
+    color : foreColor,
+    border : border,
+    'font-size':fontSize,
+    'background-color' : backColor,
+}">Attribute Binding Demo - ngStyle</div>
+
+
+<!-- ngClass Example -->
+<!-- <div [ngClass] = "{bodered : addBorder , myColor : addColor}"> -->
+<div [ngClass] = "'bordered'">
+Demo for Attribute Binding - ngClass
+</div>
+
+
+<!-- Custom Directive -->
+<div appChange>This is an Example of custom Attribute Directive</div>
+<br>
+<p>
+    Paragraph
+</p>
+<p appChange> Heading1</p>

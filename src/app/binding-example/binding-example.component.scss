@@ -1,0 +1,14 @@
+$foreColor : red;
+$borderWidth : 2px;
+
+.error{
+    border-color: $foreColor;
+    color: $foreColor;
+    border-width:$borderWidth ;
+}
+
+.success{
+    border-color:  green;
+    color: green;
+    border-width: $borderWidth ;
+}

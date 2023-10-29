@@ -1,0 +1,9 @@
+<h1>THis is a test component.</h1>
+<input type="text" name="inp1" #inputt value="qwer" />
+<p>{{ inputt.value }}</p>
+<div class="btn btn-primary">Submit</div>
+
+<div *ngFor="let cou of courses; ">
+  {{ cou.courseId }}
+   {{ cou.courseName }}
+</div>

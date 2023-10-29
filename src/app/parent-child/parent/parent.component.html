@@ -1,0 +1,21 @@
+<div class="row mt-3">
+  <div class="col-md-6 shadow p-3">
+    <h3>Parent Component</h3>
+    <div class="mb-3">
+      <label class="form-label">Add Manufacturer</label>
+      <input type="text" class="form-control" [(ngModel)]="newManufacturer" />
+    </div>
+    <div class="mt-3">
+      <button class="btn btn-primary" (click)="addManufacturer()">
+        Add New
+      </button>
+    </div>
+  </div>
+</div>
+<div class="row-mt-3">
+  <div class="col-md-6 shadow p-3">
+    <app-child [data]="manufacturers">
+      Helo this is parent component
+    </app-child>
+  </div>
+</div>

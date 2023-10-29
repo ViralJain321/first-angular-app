@@ -1,0 +1,26 @@
+
+<div class="row mt-3">
+    <div class="col-md-6">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Product name</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let c of course">
+            <td>{{ c.courseId }}</td>
+            <td>{{ c.courseName | uppercase }}</td>
+            <td>{{ c.price===0 ? 'Free' : c.price |  currency : "INR" : "symbol" }}</td>
+           <td>{{ c.description | titlecase}}</td>
+            <td>{{ c.rating | number : "1.1" }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

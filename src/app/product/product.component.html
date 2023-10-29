@@ -1,0 +1,64 @@
+<!-- <div class="col-md-4">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input class="form-control" type="text">
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary" [disabled]="isNotAvailable">Submit</button>
+    </div>
+
+    <hr>
+
+    <img [src]="source" [height]="height" [width]="width">
+</div> -->
+
+<div class="row mt-3">
+  <div class="col-md-6">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Product name</th>
+          <th>Price</th>
+          <th>Rating</th>
+          <th>Added Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of products">
+          <td>{{ p.id }}</td>
+          <td>{{ p.productName | titlecase }}</td>
+          <!-- <td
+            [class]="p.price > 50000 ? 'text-danger' : 'text-success'"
+            [class]="p.price > 50000 ? 'bg-primary' : 'bg-dark'"
+          >
+            {{ p.price | currency : "INR" : "symbol" }}
+          </td> -->
+          <td
+            [ngClass]="{
+              'text-danger': p.price > 50000,
+              'text-success': p.price <= 50000,
+              'bg-light': p.price > 50000,
+              'bg-dark': p.price <= 50000
+            }"
+          >
+            {{ p.price | currency : "INR" : "symbol" }}
+          </td>
+          <td>{{ p.rating | number : "1.1-2" }}</td>
+          <td>{{ p.addedDate | date : "dd-MM-YYYY" }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Custom Pipe -->
+<div class="row mt-3">
+  <div class="col-md-4">
+    <div class="list-group">
+      <li class="list-group-item" *ngFor="let u of userData">
+        {{ u.name | salutation : u.gender }}
+      </li>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+$foreColor : green;
+$hoverColor : yellow;
+
+h1{
+    color: $foreColor;
+
+    &:hover{
+        background-color: $hoverColor;
+    }
+}
+
+.cl{
+    color : blue;
+}
