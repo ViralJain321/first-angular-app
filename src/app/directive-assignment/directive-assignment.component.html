@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="card-header">Book a Ride</div>
+  <div class="card-body">
+    <button (click)="show()">Show All rides</button>
+    <ng-container *ngIf="showRide">
+        <button>open</button>
+      <table>
+        <tr *ngFor="let c of courses; let i = index">
+          <td>{{ c.name }}</td>
+          <td>{{ c.id }}</td>
+        </tr>
+      </table>
+    </ng-container>
+  </div>
+</div>

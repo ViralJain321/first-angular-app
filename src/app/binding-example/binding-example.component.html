@@ -1,0 +1,89 @@
+<!-- Style Binding -->
+<!-- <div class="row">
+  <div class="col-md-5">
+    <div class="form-group">
+      <label>User Name</label>
+      <input
+        type="text"
+        class="form-control"
+        [style.border]="hasError ? '2px solid red' : '2px solid green'"
+        [style.color]="'blue'"
+      />
+    </div>
+  </div>
+</div> -->
+
+<!-- Class Binding -->
+<!-- [class.className]=value -->
+<!-- <div class="row">
+  <div class="col-md-5">
+    <div class="form-group">
+      <label>User Name</label>
+      <input
+        type="text"
+        class="form-control"
+        [class.error]="hasError"
+        [class.success]="hasError"
+      />
+    </div>
+    <div class="form-group">
+      <label>Last Name</label>
+      <input
+        type="text"
+        class="form-control"
+        [class]="hasError ? 'error' : 'success'"
+      />
+    </div>
+  </div>
+</div> -->
+
+<!-- Attribute Binding (for addind a feature) (used with aria,colspan)-->
+<div class="row mt-4">
+  <div class="col-md-5">
+    <div class="table table-bordered">
+      <tr>
+        <td>Name</td>
+        <td>Praveen</td>
+      </tr>
+      <tr>
+        <td [colSpan]="2">Hello World</td>
+      </tr>
+    </div>
+  </div>
+</div>
+
+<!-- Event Binding -->
+<h3>Event Binding Value</h3>
+<div class="row mt-4">
+  <div class="col-md-5">
+    <div class="form-group">
+      <label>Sum</label>
+      <span> {{ sum }}</span>
+    </div>
+    <div class="form-group">
+      <label>Num1</label>
+      <input type="text" class="form-control" #num1 name="txtNum1" />
+    </div>
+    <div class="form-group">
+      <label>Num2</label>
+      <input type="text" class="form-control" #num2 name="txtNum2" />
+    </div>
+    <div class="form-group">
+      <button (click)="addNumber(num1.value, num2.value)">Add Numbers</button>
+    </div>
+  </div>
+</div>
+
+<hr />
+<h3>Two way Binding</h3>
+<div class="row mt-4">
+  <div class="col-md-5">
+    <div class="form-group">
+      <label>Course Name</label>
+      <input type="text" name="txtCourseName" [(ngModel)]="courseName" />
+    </div>
+    <textarea [(ngModel)]="secCourse"></textarea>
+    <h3>{{ courseName }}</h3>
+    <h3>{{ secCourse }}</h3>
+  </div>
+</div>
