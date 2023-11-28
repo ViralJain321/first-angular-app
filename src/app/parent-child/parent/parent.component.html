@@ -14,8 +14,16 @@
 </div>
 <div class="row-mt-3">
   <div class="col-md-6 shadow p-3">
-    <app-child [data]="manufacturers">
-      Helo this is parent component
+    <app-child [data]="manufacturers" (newBrandEntry)="addaNewEntry($event)" >
+      <p #parentcontentag>Helo this is parent component</p>
     </app-child>
   </div>
 </div>
+
+<div>
+  <p #ptag (mouseenter) ="changeContentOfpTag(ptag)">This is inside parent component</p>
+</div>
+
+<!-- <div>
+  <app-grandchild></app-grandchild>
+</div> -->

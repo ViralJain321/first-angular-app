@@ -1,4 +1,9 @@
 <ul class="list-group">
   <li class="list-group-item" *ngFor="let m of data">{{ m }}</li>
 </ul>
+<input type="text" value="realme" #newBrand (keydown)="print($event)"> 
+  <input type="text" #newPrice>
+  <button (click)="addNewBrand(newBrand , newPrice)"> add a new entry</button>
 <ng-content></ng-content>
+
+<app-grandchild></app-grandchild>

@@ -15,11 +15,14 @@ import { LoginComponent } from './login/login.component';
 import { NgforDirectivesComponent } from './ngfor-directives/ngfor-directives.component';
 import { AttrDirectivesComponent } from './attr-directives/attr-directives.component';
 import { DirectiveAssignmentComponent } from './directive-assignment/directive-assignment.component';
-import { ChangeDirective } from './shared/change.directive';
+import { ChangeDirective } from './shared/directives/change.directive';
 import { CourseComponent } from './course/course.component';
 import { SalutationPipe } from './shared/salutation.pipe';
 import { ParentComponent } from './parent-child/parent/parent.component';
 import { ChildComponent } from './parent-child/child/child.component';
+import { GrandchildComponent } from './parent-child/grandchild/grandchild.component';
+import { BetterDirectiveDirective } from './shared/directives/better-directive.directive';
+import { CustomDirectiveDirective } from './shared/directives/custom-directive.directive';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,10 @@ import { ChildComponent } from './parent-child/child/child.component';
     CourseComponent,
     SalutationPipe,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    GrandchildComponent,
+    BetterDirectiveDirective,
+    CustomDirectiveDirective
   ],
   imports: [
     BrowserModule,
