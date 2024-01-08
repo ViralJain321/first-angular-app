@@ -68,7 +68,7 @@ export class ChildComponent {
 
   addNewBrand(newBrand: HTMLInputElement, newPrice: HTMLInputElement) {
     console.log(this.parentcontentag);
-    
+    this.thebrand.nativeElement.focus()
     console.log(this.thebrand);
     this.newBrandEntry.emit({ brand: newBrand.value, price: newPrice.value });
   }
