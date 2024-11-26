@@ -20,6 +20,8 @@ export class ChildComponent {
   @ContentChild('parentcontentag')
   parentcontentag : ElementRef = {} as ElementRef;
 
+  public onPushStratergy : string = "theOnPushStratergy";
+
   constructor() {
     console.log(this.data);
   }

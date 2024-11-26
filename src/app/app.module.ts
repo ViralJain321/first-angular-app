@@ -24,6 +24,8 @@ import { GrandchildComponent } from './parent-child/grandchild/grandchild.compon
 import { BetterDirectiveDirective } from './shared/directives/better-directive.directive';
 import { CustomDirectiveDirective } from './shared/directives/custom-directive.directive';
 import { ObservablesComponent } from './observables/observables.component';
+import { ShortenPipe } from './shared/pipes/shorten.pipe';
+import { SignalsComponent } from './signals/signals.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { ObservablesComponent } from './observables/observables.component';
     GrandchildComponent,
     BetterDirectiveDirective,
     CustomDirectiveDirective,
-    ObservablesComponent
+    ObservablesComponent,
+    ShortenPipe,
+    SignalsComponent
   ],
   imports: [
     BrowserModule,

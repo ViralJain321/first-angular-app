@@ -1,4 +1,4 @@
-<h1>THis is a test component.</h1>
+<!-- <h1>THis is a test component.</h1>
 <input type="text" name="inp1" #inputt value="qwer" />
 <p>{{ inputt.value }}</p>
 <div class="btn btn-primary">Submit</div>
@@ -6,4 +6,14 @@
 <div *ngFor="let cou of courses; ">
   {{ cou.courseId }}
    {{ cou.courseName }}
-</div>
+</div> -->
+<ng-container *ngFor="let course of courses">
+  <h3>{{course.courseName | shorten}}</h3>
+</ng-container>
+
+<h3>
+  {{timeoutValue}}
+</h3>
+<h3>
+  {{debounceTimeValue}}
+</h3>

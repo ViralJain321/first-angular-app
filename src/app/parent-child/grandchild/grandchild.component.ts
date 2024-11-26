@@ -1,10 +1,14 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-grandchild',
   templateUrl: './grandchild.component.html',
-  styleUrls: ['./grandchild.component.scss']
+  styleUrls: ['./grandchild.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class GrandchildComponent {
-    simpleBoolean : boolean = false;
+  @Input()
+  onPushChange = 'hello1234';
+
+  simpleBoolean: boolean = false;
 }
