@@ -26,6 +26,10 @@ import { CustomDirectiveDirective } from './shared/directives/custom-directive.d
 import { ObservablesComponent } from './observables/observables.component';
 import { ShortenPipe } from './shared/pipes/shorten.pipe';
 import { SignalsComponent } from './signals/signals.component';
+import { NgContentComponent } from './ng-content/ng-content.component';
+import { Child2Component } from "./parent-child/child2/child2.component";
+import { Parent1Component } from "./parent-child/parent1/parent1.component";
+import { Child1Component } from "./parent-child/child1/child1.component";
 
 @NgModule({
   declarations: [
@@ -51,15 +55,11 @@ import { SignalsComponent } from './signals/signals.component';
     CustomDirectiveDirective,
     ObservablesComponent,
     ShortenPipe,
-    SignalsComponent
+    SignalsComponent,
+    NgContentComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, Child2Component, Parent1Component, Child1Component],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-
-export class AppModule { }
+export class AppModule {}
